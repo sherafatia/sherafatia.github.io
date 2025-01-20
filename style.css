@@ -25,12 +25,22 @@ main {
 
 /* Section headings */
 h2 {
-    text-align: left;
+    text-align: center;
     margin-top: 2rem;
     color: #333;
     font-size: 1.8rem;
 }
 
+/* About section alignment */
+#about p {
+    text-align: left;
+}
+
+/* Connect section alignment */
+#connect p {
+    text-align: left;
+    padding: 4rem; /* More padding for better spacing */
+}
 /* Footer styles */
 footer {
     background: #333;
