@@ -1,4 +1,4 @@
-/* General body styling */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,8 +12,8 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 2rem 0;
-    text-align: center;
+    padding: 2rem 0; /* More padding for better spacing */
+    text-align: center; /* Centers the header content */
 }
 
 /* Main content styles */
@@ -42,25 +42,31 @@ footer {
     width: 100%;
 }
 
-/* Social links */
+/* Social links styles */
 .social-links {
     margin-top: 1rem;
     display: flex;
-    justify-content: center;
-    gap: 1.5rem; /* Space between icons */
+    justify-content: center; /* Centers the social links */
+    gap: 1rem; /* Space between links */
 }
 
 .social-links a {
     text-decoration: none;
-    color: #333; /* Match the header/footer gray color */
-    font-size: 2rem; /* Larger icon size */
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #007bff; /* Change color to blue on hover */
+    color: #fff; /* White text for header links */
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #333;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .social-links a i {
-    display: inline-block;
+    margin-right: 0.5rem; /* Space between icon and text */
+}
+
+.social-links a:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #fff; /* Ensure text remains white */
+    border-color: #007bff; /* Match hover background */
 }
