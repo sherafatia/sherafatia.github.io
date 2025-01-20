@@ -39,7 +39,6 @@ h2 {
 /* Connect section alignment */
 #connect p {
     text-align: left;
-    margin-bottom: 10rem; /* Adds more space below the connect section */
 }
 /* Footer styles */
 footer {
@@ -69,6 +68,8 @@ footer {
     background-color: #333;
     border-radius: 5px;
     transition: all 0.3s ease;
+    margin-bottom: 10rem; /* Adds more space below the connect section */
+
 }
 
 .social-links a i {
