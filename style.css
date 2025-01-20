@@ -18,14 +18,14 @@ header {
 
 /* Main content styles */
 main {
-    padding: 2rem;
+    padding: 4rem;
     max-width: 800px;
     margin: auto;
 }
 
 /* Section headings */
 h2 {
-    text-align: center;
+    text-align: left;
     margin-top: 2rem;
     color: #333;
     font-size: 1.8rem;
