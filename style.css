@@ -3,15 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #998AB4;
+    background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
 }
 
 /* Header styles */
 header {
-    height: 200px; /* Fixed height for the header */
-    background: #333;
+    background: #998AB4;
     color: #fff;
     padding: 2rem 0; /* More padding for better spacing */
     text-align: center; /* Centers the header content */
@@ -44,7 +43,7 @@ h2 {
 }
 /* Footer styles */
 footer {
-    background: #333;
+    background: #998AB4;
     color: #fff;
     text-align: left;
     padding: 1rem 0;
