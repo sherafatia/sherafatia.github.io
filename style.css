@@ -39,7 +39,7 @@ h2 {
 /* Connect section alignment */
 #connect p {
     text-align: left;
-    padding: 8rem; /* More padding for better spacing */
+    margin-bottom: 4rem; /* Adds more space below the connect section */
 }
 /* Footer styles */
 footer {
