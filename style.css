@@ -10,7 +10,7 @@ body {
 
 /* Header styles */
 header {
-    background: #998AB4;
+    background: #333;
     color: #fff;
     padding: 2rem 0; /* More padding for better spacing */
     text-align: center; /* Centers the header content */
@@ -43,7 +43,7 @@ h2 {
 }
 /* Footer styles */
 footer {
-    background: #998AB4;
+    background: #333;
     color: #fff;
     text-align: left;
     padding: 1rem 0;
