@@ -8,62 +8,107 @@ body {
     line-height: 1.6;
 }
 
-/* Header styles */
-header {
-    background: #333;
+/* Navigation Bar */
+nav {
+    background-color: #333;
     color: #fff;
-    padding: 2rem 0; /* More padding for better spacing */
-    text-align: center; /* Centers the header content */
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Main content styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+}
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed for spacing */
+    left: 10px; /* Adjust as needed for spacing */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff; /* White text color */
+    padding: 0.5rem 1rem; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the caption background */
+    font-size: 1rem; /* Adjust font size as needed */
+    font-family: Arial, sans-serif;
+}
+
+
+/* Main Content */
 main {
-    padding: 4rem;
+    padding: 4rem 2rem;
     max-width: 800px;
     margin: auto;
+    margin-top: 6rem; /* Account for the fixed navbar height */
 }
 
-/* Section headings */
+section {
+    margin-bottom: 4rem;
+}
+
 h2 {
     text-align: left;
-    margin-top: 2rem;
+    margin-bottom: 1.5rem;
     color: #333;
     font-size: 1.8rem;
 }
 
-/* About section alignment */
-#about p {
-    text-align: left;
-}
-
-/* Connect section alignment */
-#connect p {
-    text-align: left;
-    margin-bottom: 4rem; /* Adds more space below the connect section */
-}
-/* Footer styles */
+/* Footer */
 footer {
     background: #333;
     color: #fff;
-    text-align: left;
+    text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Social links styles */
+/* Social Links */
 .social-links {
-    margin-top: 1rem;
-    margin-bottom: 5rem;
     display: flex;
-    justify-content: center; /* Centers the social links */
-    gap: 1rem; /* Space between links */
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .social-links a {
     text-decoration: none;
-    color: #fff; /* White text for header links */
+    color: #fff;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
     border: 2px solid #333;
@@ -72,12 +117,8 @@ footer {
     transition: all 0.3s ease;
 }
 
-.social-links a i {
-    margin-right: 0.5rem; /* Space between icon and text */
-}
-
 .social-links a:hover {
-    background-color: #007bff; /* Blue background on hover */
-    color: #fff; /* Ensure text remains white */
-    border-color: #007bff; /* Match hover background */
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
 }
