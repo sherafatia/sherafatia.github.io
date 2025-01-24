@@ -10,15 +10,23 @@ body {
 
 /* Header styles */
 header {
-    background: #333; /* Dark background */
-    color: #fff;
-    width: 100%; /* Full width */
-    height: 80px; /* Much narrower height */
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Space out name and navigation */
-    align-items: center; /* Center items vertically */
-    padding: 0 20px; /* Add horizontal padding */
-    box-sizing: border-box; /* Include padding in height calculations */
+    background-image: url('your-image.jpg'); /* Replace with the actual image file path */
+    background-size: cover; /* Ensures the image covers the full header */
+    background-position: center;
+    height: 100px; /* Narrow height */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between name and navigation */
+    padding: 0 20px; /* Add space on left and right */
+    color: #fff; /* White text */
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+/* Name (Header Title) */
+header h1 {
+    font-size: 1.5rem; /* Consistent font size */
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 /* Navigation styles */
@@ -26,32 +34,19 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Inline navigation links */
-    gap: 1rem; /* Space between links */
-}
-
-nav ul li {
-    margin: 0;
+    display: flex;
+    gap: 1rem; /* Space between navigation links */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-family: Arial, sans-serif; /* Ensure consistent font */
-    font-size: 1rem; /* Same size as the name */
+    font-size: 1rem; /* Same size as name */
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #007bff; /* Highlight on hover */
-}
-
-/* Name (Header Title) Styles */
-header h1 {
-    margin: 0;
-    font-size: 1rem; /* Match font size with tabs */
-    font-family: Arial, sans-serif; /* Ensure consistent font */
-    color: #fff;
 }
 
 /* Main content styles */
