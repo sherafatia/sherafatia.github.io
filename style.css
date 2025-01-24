@@ -13,22 +13,15 @@ header {
     background: #333; /* Dark background */
     color: #fff;
     width: 100%; /* Full width */
-    height: 150px; /* Narrower height */
+    height: 80px; /* Much narrower height */
     display: flex; /* Use flexbox */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    position: relative; /* Allows absolute positioning for nav */
-    text-align: center; /* Center text */
+    justify-content: space-between; /* Space out name and navigation */
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Add horizontal padding */
+    box-sizing: border-box; /* Include padding in height calculations */
 }
 
 /* Navigation styles */
-nav {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-}
-
 nav ul {
     list-style: none;
     margin: 0;
@@ -44,12 +37,21 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1rem;
+    font-family: Arial, sans-serif; /* Ensure consistent font */
+    font-size: 1rem; /* Same size as the name */
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #007bff; /* Highlight on hover */
+}
+
+/* Name (Header Title) Styles */
+header h1 {
+    margin: 0;
+    font-size: 1rem; /* Match font size with tabs */
+    font-family: Arial, sans-serif; /* Ensure consistent font */
+    color: #fff;
 }
 
 /* Main content styles */
