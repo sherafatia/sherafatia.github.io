@@ -1,61 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arefeh Sherafati Academy</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arefeh Sherafati Academy</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .grid {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1 1 300px;
+      padding: 1.5rem;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .card h2 {
+      color: #5A189A;
+      margin-bottom: 1rem;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #5A189A;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .card a:hover {
+      background-color: #4b1482;
+    }
+  </style>
 </head>
 <body>
-    <header>
+  <header>
     <nav>
-        <h1>Arefeh Sherafati Academy</h1>
-        <ul>
-        <li><a href="#mentorship">Mentorship</a></li>
-        <li><a href="consulting.html">Consulting</a></li>
-        </ul>
+      <h1><a href="academy.html" style="text-decoration: none; color: white;">Arefeh Sherafati Academy</a></h1>
     </nav>
-    </header>
+  </header>
 
-    <main>
-        <section id="mentorship">
-            <h2>Mentorship Program</h2>
-            </p>I am passionate about sharing my love for scientific discovery with the next generation of scientists through 
-                 personalized mentorship in computational neuroscience, AI, and data science.</p>
+  <main>
+    <div class="grid">
+      <div class="card">
+        <h2>Mentorship</h2>
+        <p>Personalized research mentorship for students interested in neuroscience, AI, and publishing scientific work.</p>
+        <a href="mentorship.html">Learn More</a>
+      </div>
 
-            <h3>Who is this for?</h3>
-            <p>Middle school, high school, and college students with a curiosity about how the brain and AI models work and a
-                 desire to perform hands-on cutting edge research. Each student works on a graduate-level research project tailored to
-                 their interests and skill level, gaining real-world experience in coding, data analysis, and scientific thinking.
-            </p>
-
-            <h3>What students learn?</h3>
-            <ul>
-                <li>How to analyze real neuroscience or AI datasets</li>
-                <li>How to use Python, Jupyter Notebooks, and key tools</li>
-                <li>How to design and publish a scientific research paper</li>
-            </ul>
-
-            <h3>How to apply</h3>
-            <p>If you're interested, please email me at <strong style="color:#007BFF;">arefeh[at]wustl[dot]edu</strong> with a short
-            paragraph about your background and interests for a free consultation.</p>
-
-            <p>
-                Besides my program, I am also a research mentor at
-                <a href="https://www.lumiere-education.com/" target="_blank" rel="noopener" style="color:#007BFF; font-weight:bold; text-decoration: none;">
-                    Lumiere Education
-                </a>,
-                <a href="https://mehtaplustutoring.com/" target="_blank" rel="noopener" style="color:#007BFF; font-weight:bold; text-decoration: none;">
-                    Mehta+
-                </a>, and
-                <a href="https://www.superprof.com/physics-phd-offering-research-mentorship-neuroscience-and-artificial-intelligencepublish-your-own-paper.html" target="_blank" rel="noopener" style="color:#007BFF; font-weight:bold; text-decoration: none;">
-                    Superprof.
-                </a>
-            </p>
-
-
-
-        </section>
-    </main>
+      <div class="card">
+        <h2>Consulting</h2>
+        <p>Expert guidance in neuroimaging, data pipelines, and AI-driven brain modeling for labs and startups.</p>
+        <a href="consulting.html">Learn More</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
