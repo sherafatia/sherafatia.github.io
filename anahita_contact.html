@@ -1,0 +1,41 @@
+<!-- contact.html -->
+<form action="/submit" method="POST" class="space-y-4 max-w-xl">
+  <h2 class="text-2xl font-bold">Contact Form</h2>
+
+  <label class="block">
+    <span class="font-medium">Name</span>
+    <input name="name" type="text" required class="mt-1 w-full rounded border px-3 py-2">
+  </label>
+
+  <label class="block">
+    <span class="font-medium">Email</span>
+    <input name="email" type="email" required class="mt-1 w-full rounded border px-3 py-2">
+  </label>
+
+  <!-- Program (prefilled) -->
+  <label class="block">
+    <span class="font-medium">Program</span>
+    <input id="program" name="program" type="text" readonly class="mt-1 w-full rounded border px-3 py-2 bg-gray-50">
+  </label>
+
+  <label class="block">
+    <span class="font-medium">Background & Interests</span>
+    <textarea name="message" rows="5" required class="mt-1 w-full rounded border px-3 py-2"
+      placeholder="Short paragraph about your background and interests"></textarea>
+  </label>
+
+  <button type="submit" class="inline-flex justify-center rounded-xl bg-teal-700 px-4 py-2 font-semibold text-white hover:bg-teal-800">
+    Send
+  </button>
+</form>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  const p = params.get('program');
+  if (p) {
+    const field = document.getElementById('program');
+    field.value = p;
+    // Optional: reflect in the page title/subtitle
+    // document.querySelector('h2').textContent = `Contact Form — ${p}`;
+  }
+</script>
