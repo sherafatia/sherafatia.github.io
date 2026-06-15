@@ -48,10 +48,12 @@
         .cv-pubs a { color: #007bff; text-decoration: none; }
         .cv-pubs a:hover { text-decoration: underline; }
         .cv-pubs .venue { color: #777; font-style: italic; }
-        .cv-twocol { columns: 2; column-gap: 2.5rem; max-width: 900px; }
-        .cv-twocol p { margin: 0 0 0.6rem; break-inside: avoid; }
         .cv-note { color: #888; font-size: 0.9rem; font-style: italic; }
-        @media (max-width: 600px) { .cv-twocol { columns: 1; } .cv-entry { flex-direction: column; gap: 0.2rem; } }
+        .cv-section a { color: #007bff; text-decoration: none; }
+        .cv-section a:hover { text-decoration: underline; }
+        .cv-summary a { color: #007bff; text-decoration: none; }
+        .cv-summary a:hover { text-decoration: underline; }
+        @media (max-width: 600px) { .cv-entry { flex-direction: column; gap: 0.2rem; } }
     </style>
 </head>
 <body>
@@ -68,15 +70,15 @@
     </header>
 
     <main>
-        <p class="cv-summary">Arefeh Sherafati is a research scientist and science communicator working at the intersection of physics, neuroscience, and artificial intelligence. She currently develops optical neuroimaging methods at St. Jude Children's Research Hospital, advises early-stage neurotechnology and digital-health startups, and mentors the next generation of computational scientists. Her work spans clinical brain imaging, large-scale open neuroscience datasets, and award-winning applied AI, including a 2023 Grand Prize Runner-Up finish in the Vesuvius Challenge for using deep learning to read 2,000-year-old Herculaneum scrolls. She has published peer-reviewed work in venues such as eLife and NeuroImage and presented at more than 50 international conferences.</p>
+        <p class="cv-summary">Arefeh Sherafati is a research scientist and science communicator working at the intersection of physics, neuroscience, and artificial intelligence. She currently develops optical neuroimaging methods at <a href="https://www.stjude.org" target="_blank">St. Jude Children's Research Hospital</a>, advises early-stage neurotechnology and digital-health startups, and mentors the next generation of computational scientists. Her work spans clinical brain imaging, large-scale open neuroscience datasets, and award-winning applied AI, including a 2023 Grand Prize Runner-Up finish in the <a href="https://scrollprize.org/" target="_blank">Vesuvius Challenge</a> for using deep learning to read 2,000-year-old Herculaneum scrolls.</p>
 
         <a class="cv-download" href="Arefeh_Sherafati_CV.pdf" target="_blank"><i class="fas fa-download"></i>&nbsp; Download full CV (PDF)</a>
 
         <section class="cv-section">
             <h2>Selected highlights</h2>
             <ul class="cv-highlights">
-                <li><i class="fas fa-trophy"></i><strong>Vesuvius Challenge 2023 Grand Prize Runner-Up ($50,000)</strong> for deep-learning ink detection that helped read ancient, unopened Herculaneum scrolls.</li>
-                <li><i class="fas fa-database"></i><strong>Led an Allen Institute for Brain Science collaboration</strong> to open-source the largest calcium-imaging dataset of mouse primary visual cortex to date.</li>
+                <li><i class="fas fa-trophy"></i><strong><a href="https://scrollprize.org/" target="_blank">Vesuvius Challenge</a> 2023 Grand Prize Runner-Up ($50,000)</strong> for deep-learning ink detection that helped read ancient, unopened Herculaneum scrolls.</li>
+                <li><i class="fas fa-database"></i><strong>Led an <a href="https://alleninstitute.org/division/brain-science/" target="_blank">Allen Institute for Brain Science</a> collaboration</strong> to open-source the largest calcium-imaging dataset of mouse primary visual cortex to date.</li>
                 <li><i class="fas fa-brain"></i><strong>Pioneered computational methods</strong> for high-density diffuse optical tomography (HD-DOT), including the first comprehensive motion-artifact analysis for the field.</li>
                 <li><i class="fas fa-file-lines"></i><strong>First-author research in <em>eLife</em></strong> on how the brain supports speech perception in listeners with cochlear implants.</li>
                 <li><i class="fas fa-rocket"></i><strong>Scientific &amp; AI advisor</strong> to early-stage neurotech and digital-health startups, from research strategy to NIH SBIR/STTR proposals and fundraising narratives.</li>
@@ -88,7 +90,7 @@
             <h2>Experience</h2>
 
             <div class="cv-entry">
-                <span><span class="role">Research Scientist</span>, <span class="org">St. Jude Children's Research Hospital</span></span>
+                <span><span class="role">Research Scientist</span>, <span class="org"><a href="https://www.stjude.org" target="_blank">St. Jude Children's Research Hospital</a></span></span>
                 <span class="date">2025 – Present</span>
             </div>
             <ul class="bullets">
@@ -107,11 +109,11 @@
             </ul>
 
             <div class="cv-entry">
-                <span><span class="role">Research Mentor</span>, <span class="org">Lumiere Education, Mehta+, Superprof</span></span>
+                <span><span class="role">Research Mentor</span>, <span class="org"><a href="https://www.lumiere-education.com/" target="_blank">Lumiere Education</a>, Mehta+, Superprof</span></span>
                 <span class="date">2023 – Present</span>
             </div>
             <ul class="bullets">
-                <li>Mentor college and high-school students one-on-one in neuroscience, physics, and computer-science research projects, guiding several to their first publications.</li>
+                <li>Mentor college and high-school students one-on-one in neuroscience, physics, and computer-science research, guiding several to their first publications.</li>
             </ul>
 
             <div class="cv-entry">
@@ -124,16 +126,16 @@
             </ul>
 
             <div class="cv-entry">
-                <span><span class="role">Postdoctoral Scholar</span>, <span class="org">UCSF Weill Institute for Neurosciences</span></span>
+                <span><span class="role">Postdoctoral Scholar</span>, <span class="org"><a href="https://weill.ucsf.edu/" target="_blank">UCSF Weill Institute for Neurosciences</a></span></span>
                 <span class="date">2023 – 2024</span>
             </div>
             <ul class="bullets">
-                <li>Led a project with the Allen Institute to release the largest mouse V1 calcium-imaging dataset to date.</li>
+                <li>Led a project with the <a href="https://alleninstitute.org/division/brain-science/" target="_blank">Allen Institute</a> to release the largest mouse V1 calcium-imaging dataset to date.</li>
                 <li>Built a Python toolbox for statistical analysis of neural responses; characterized spatial and motion selectivity with ML.</li>
             </ul>
 
             <div class="cv-entry">
-                <span><span class="role">Postdoctoral Research Associate</span>, <span class="org">Washington University School of Medicine</span></span>
+                <span><span class="role">Postdoctoral Research Associate</span>, <span class="org"><a href="https://medicine.wustl.edu/" target="_blank">Washington University School of Medicine</a></span></span>
                 <span class="date">2020 – 2023</span>
             </div>
             <ul class="bullets">
@@ -142,10 +144,11 @@
             </ul>
 
             <div class="cv-entry">
-                <span><span class="role">Graduate Research Assistant</span>, <span class="org">Washington University in St. Louis</span></span>
+                <span><span class="role">Graduate Research Assistant</span>, <span class="org"><a href="https://wustl.edu/" target="_blank">Washington University in St. Louis</a></span></span>
                 <span class="date">2014 – 2020</span>
             </div>
             <ul class="bullets">
+                <li>Conducted doctoral research in the <a href="https://www.mir.wustl.edu/research/research-centers/biophotonics-research-center-brc/labs/culver-lab/" target="_blank">Culver Lab</a>, advised by Prof. Joseph Culver.</li>
                 <li>Published the first comprehensive motion-artifact analysis for HD-DOT and developed a novel motion-detection metric.</li>
                 <li>Led clinical protocol development for cochlear-implant and deep-brain-stimulation patients; contributed to NIH R01 grants and projects funded by the Gates Foundation and Meta.</li>
             </ul>
@@ -157,11 +160,12 @@
             <h2>Selected publications</h2>
             <ul class="cv-pubs">
                 <li>Dorsolateral prefrontal cortex supports speech perception in listeners with cochlear implants. <span class="venue">eLife.</span> <a href="https://elifesciences.org/articles/75323" target="_blank">Read</a></li>
+                <li>fNIRS reproducibility varies with data quality, analysis pipelines, and researcher experience. <span class="venue">Communications Biology.</span> <a href="https://www.nature.com/articles/s42003-025-08412-1" target="_blank">Read</a></li>
                 <li>Global motion detection and censoring in high-density diffuse optical tomography. <span class="venue">Human Brain Mapping.</span> <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.25111" target="_blank">Read</a></li>
                 <li>Mapping cortical activations underlying covert and overt language production. <span class="venue">NeuroImage.</span> <a href="https://www.sciencedirect.com/science/article/pii/S1053811923003415" target="_blank">Read</a></li>
                 <li>Mapping brain function in adults and young children during naturalistic viewing. <span class="venue">Human Brain Mapping.</span> <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.26684" target="_blank">Read</a></li>
                 <li>Mapping neural correlates of biological motion perception in autistic children. <span class="venue">Molecular Autism.</span> <a href="https://link.springer.com/article/10.1186/s13229-024-00614-4" target="_blank">Read</a></li>
-                <li>A high-density diffuse optical tomography dataset of naturalistic viewing. <span class="venue">Scientific Data.</span> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10659362/" target="_blank">Read</a></li>
+                <li>A high-density diffuse optical tomography dataset of naturalistic viewing. <span class="venue">Scientific Data.</span> <a href="https://www.nature.com/articles/s41597-025-06041-1" target="_blank">Read</a></li>
                 <li>Decoding visual information from high-density diffuse optical tomography. <span class="venue">NeuroImage.</span> <a href="https://www.sciencedirect.com/science/article/pii/S1053811920310016" target="_blank">Read</a></li>
                 <li>Portable, field-based neuroimaging. <span class="venue">NeuroImage.</span> <a href="https://www.sciencedirect.com/science/article/pii/S1053811920300288" target="_blank">Read</a></li>
             </ul>
@@ -171,17 +175,17 @@
         <section class="cv-section">
             <h2>Education</h2>
             <div class="cv-entry">
-                <span><span class="role">Ph.D. &amp; M.Sc., Physics</span>, <span class="org">Washington University in St. Louis</span></span>
+                <span><span class="role">Ph.D. &amp; M.Sc., Physics</span>, <span class="org"><a href="https://wustl.edu/" target="_blank">Washington University in St. Louis</a></span></span>
                 <span class="date">2014 – 2020</span>
             </div>
-            <p class="cv-note" style="margin-top:0.2rem;">Thesis: Separating Signal from Noise in High-Density Diffuse Optical Tomography</p>
+            <p class="cv-note" style="margin-top:0.2rem;">Thesis: Separating Signal from Noise in High-Density Diffuse Optical Tomography &middot; Advisor: <a href="https://www.mir.wustl.edu/research/research-centers/biophotonics-research-center-brc/labs/culver-lab/" target="_blank">Prof. Joseph Culver</a></p>
             <div class="cv-entry">
                 <span><span class="role">M.Sc., Physics</span>, <span class="org">Shahid Beheshti University</span></span>
                 <span class="date">2011 – 2013</span>
             </div>
             <p class="cv-note" style="margin-top:0.2rem;">Thesis: Cosmological Tests in Non-Linear Massive Gravity</p>
             <div class="cv-entry">
-                <span><span class="role">B.Sc., Physics</span>, <span class="org">Sharif University of Technology</span></span>
+                <span><span class="role">B.Sc., Physics</span>, <span class="org"><a href="https://en.sharif.edu/" target="_blank">Sharif University of Technology</a></span></span>
                 <span class="date">2007 – 2011</span>
             </div>
         </section>
@@ -190,7 +194,7 @@
             <h2>Awards &amp; honors</h2>
             <ul class="bullets">
                 <li>Vesuvius Challenge 2023 Grand Prize Runner-Up ($50,000) and 2024 Progress Prize</li>
-                <li>1st Place, SPIE Optics Outreach Games, Optics + Photonics 2016</li>
+                <li>1st Place, <a href="https://spie.org/" target="_blank">SPIE</a> Optics Outreach Games, Optics + Photonics 2016</li>
                 <li>1st Place, Annual Graduate Research Symposium in Sciences, 2016</li>
                 <li>SPIE Travel Grant for Leadership Workshop</li>
                 <li>Hughes Summer Fellowship; Graduate Teaching Fellowship; University Fellow, WashU Physics</li>
