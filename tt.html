@@ -1,41 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Coming Soon – Arefeh Sherafati</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tennis | Arefeh Sherafati</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
+        .tt-text {
+            text-align: justify;
+            max-width: 900px;
         }
-
-        .coming-soon {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .coming-soon h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .coming-soon p {
-            font-size: 1.2rem;
+        .tt-closing {
+            font-style: italic;
             color: #555;
         }
+        .tt-photos {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            max-width: 820px;
+            margin: 2rem 0 3rem;
+        }
+        .tt-photos figure {
+            flex: 1 1 300px;
+            margin: 0;
+        }
+        .tt-photos img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+        .tt-caption {
+            font-size: 0.85rem;
+            color: #888;
+            text-align: center;
+            margin: 0.5rem 0 0;
+        }
+        ul.tt-records {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+            max-width: 900px;
+        }
+        ul.tt-records li {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            padding: 0.65rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        ul.tt-records li:last-child { border-bottom: none; }
+        .tt-records .yr { color: #888; white-space: nowrap; }
     </style>
 </head>
 <body>
-    <div class="coming-soon">
-        <h1>Coming Soon</h1>
-        <p>The Table Tennis section is under construction. Please check back later!</p>
-    </div>
+    <header>
+        <nav>
+            <h1>Arefeh Sherafati</h1>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="academy-coming-soon.html">Academy</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="tt.html">Table Tennis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tabletennis">
+            <h2>Table Tennis</h2>
+
+            <div class="tt-text">
+                <p>Table tennis has been part of my life since I was a child in Iran. I started at our local club in Qaemshahr, under a coach named Kianoosh Kaboli, who taught me far more than forehands and backhands. She gave me confidence, the instinct to think under pressure, and a belief that even something as competitive as sport can be pursued with love. By ten I was competing nationally, and for years I won medals at Iran's national championships, representing my state, Mazandaran.</p>
+
+                <p>At seventeen I reached the junior national team trials, then chose science over a professional athletic path. I studied physics at Sharif University of Technology, where I helped start its first women's table tennis team.</p>
+
+                <p>I never stopped playing. After moving to the U.S. for graduate school in 2014, I helped start the women's table tennis team at Washington University in St. Louis, won NCTTA Lower Midwest women's singles, doubles, and team titles, with medals at the regional level, and became Pennsylvania State women's singles champion in 2023. I still compete today, earning sanctioned titles at clubs across the U.S.</p>
+
+                <p class="tt-closing">More than any title, the game has shaped who I am.</p>
+            </div>
+
+            <div class="tt-photos">
+                <figure>
+                    <img src="./images/tt-doubles-nctta.jpg" alt="Arefeh Sherafati competing in NCTTA women's doubles">
+                    <figcaption class="tt-caption">Doubles, representing Washington University in St. Louis.</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/tt-nctta-team.jpg" alt="NCTTA women's doubles match">
+                    <figcaption class="tt-caption">NCTTA women's doubles.</figcaption>
+                </figure>
+            </div>
+
+            <h2>Selected results</h2>
+            <ul class="tt-records">
+                <li><span>National team &amp; doubles medalist, Iran national championships (Mazandaran)</span><span class="yr">2000–2006</span></li>
+                <li><span>Iranian collegiate national championships, team &amp; doubles medals (Sharif University)</span><span class="yr">2007–2012</span></li>
+                <li><span>NCTTA Lower Midwest women's singles, doubles, &amp; team champion</span><span class="yr">2014–2018</span></li>
+                <li><span>Pennsylvania State women's singles champion</span><span class="yr">2023</span></li>
+                <li><span>USATT sanctioned titles at clubs across the U.S.</span><span class="yr">2018–present</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Arefeh Sherafati</p>
+    </footer>
 </body>
 </html>
