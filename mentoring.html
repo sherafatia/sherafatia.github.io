@@ -30,16 +30,6 @@
         .m-stat .num { display: block; font-size: 1.8rem; font-weight: bold; color: var(--accent); }
         .m-stat .lbl { font-size: 0.9rem; color: var(--muted); }
 
-        .m-steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin: 1rem 0 3rem;
-        }
-        .m-step { border-left: 3px solid var(--accent); padding: 0.25rem 0 0.25rem 1rem; }
-        .m-step h3 { margin: 0 0 0.4rem; font-size: 1.05rem; color: #333; }
-        .m-step p { margin: 0; color: #555; font-size: 0.95rem; }
-
         .m-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.5rem; }
         .m-filters button {
             font: inherit;
@@ -115,7 +105,6 @@
         @media (max-width: 900px) {
             .m-grid { grid-template-columns: repeat(2, 1fr); }
             .m-stats { grid-template-columns: repeat(2, 1fr); }
-            .m-steps { grid-template-columns: 1fr; }
         }
         @media (max-width: 600px) {
             .m-grid { grid-template-columns: 1fr; }
@@ -150,22 +139,6 @@
                 <div class="m-stat"><span class="num">15</span><span class="lbl">featured projects</span></div>
                 <div class="m-stat"><span class="num">11</span><span class="lbl">completed papers</span></div>
                 <div class="m-stat"><span class="num">2</span><span class="lbl">conference presentations</span></div>
-            </div>
-
-            <h2>How I mentor</h2>
-            <div class="m-steps">
-                <div class="m-step">
-                    <h3>1 · Find the question</h3>
-                    <p>We start from what the student is curious about and narrow it to one answerable research question.</p>
-                </div>
-                <div class="m-step">
-                    <h3>2 · Do the science</h3>
-                    <p>Students learn the methods hands-on: open datasets, Python, machine learning, statistics, or systematic literature review.</p>
-                </div>
-                <div class="m-step">
-                    <h3>3 · Write it up</h3>
-                    <p>Each project ends in a full paper, with guidance on figures, revisions, and submitting to journals or conferences.</p>
-                </div>
             </div>
 
             <h2>Student research</h2>
