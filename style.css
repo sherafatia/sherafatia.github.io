@@ -306,3 +306,12 @@ footer {
     text-decoration: underline;
     color: #666666; /* darker grey on hover (optional) */
 }
+
+/* Mobile nav: stack title above links and let links wrap */
+@media (max-width: 700px) {
+    nav { flex-direction: column; gap: 0.5rem; }
+    nav ul { flex-wrap: wrap; gap: 0.25rem; }
+    nav li a { padding: 0.35rem 0.6rem; }
+}
+main { box-sizing: border-box; }
+@media (max-width: 600px) { main { padding: 2rem 1rem; } }

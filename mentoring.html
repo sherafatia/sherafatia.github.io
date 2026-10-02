@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship | Arefeh Sherafati</title>
+    <meta name="description" content="Student research mentored by Dr. Arefeh Sherafati in neuroscience, AI, and data science: original studies, reviews, and projects in progress.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root { --accent: #5A189A; --accent-soft: #efe6f7; --teal: #2A9D8F; --orange: #E76F51; --muted: #777; }
+
+        .m-intro { max-width: 900px; text-align: justify; }
+        .m-intro p { margin: 0 0 1rem; }
+
+        .m-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0 3rem;
+            max-width: 900px;
+        }
+        .m-stat {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.06);
+        }
+        .m-stat .num { display: block; font-size: 1.8rem; font-weight: bold; color: var(--accent); }
+        .m-stat .lbl { font-size: 0.9rem; color: var(--muted); }
+
+        .m-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0 3rem;
+        }
+        .m-step { border-left: 3px solid var(--accent); padding: 0.25rem 0 0.25rem 1rem; }
+        .m-step h3 { margin: 0 0 0.4rem; font-size: 1.05rem; color: #333; }
+        .m-step p { margin: 0; color: #555; font-size: 0.95rem; }
+
+        .m-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.5rem; }
+        .m-filters button {
+            font: inherit;
+            font-size: 0.9rem;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: #333;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+        .m-filters button.active { background: #333; color: #fff; border-color: #333; }
+
+        .m-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .m-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .m-card:hover { transform: translateY(-5px); box-shadow: 4px 4px 15px rgba(0,0,0,0.15); }
+        .m-card > img { width: 100%; aspect-ratio: 5 / 3; object-fit: cover; display: block; background: #f7f5fb; }
+        .m-body { padding: 1rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
+        .m-who { display: flex; align-items: center; gap: 0.7rem; }
+        .m-avatar {
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--accent-soft); color: var(--accent);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; font-size: 0.95rem; flex-shrink: 0; overflow: hidden;
+        }
+        .m-avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .m-name { font-weight: bold; color: #333; line-height: 1.2; }
+        .m-meta { font-size: 0.82rem; color: var(--muted); }
+        .m-card h3 { font-size: 1.02rem; margin: 0; color: #333; line-height: 1.35; }
+        .m-card p { font-size: 0.93rem; color: #555; margin: 0; text-align: left; }
+        .m-status {
+            margin-top: auto;
+            align-self: flex-start;
+            font-size: 0.8rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+        .m-status.done { background: #e3f4f1; color: #1d6f65; }
+        .m-status.wip { background: #fdece7; color: #a8442b; }
+        .m-note { font-size: 0.85rem; color: #999; margin-top: 1rem; }
+
+        .m-programs { display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; margin: 0.5rem 0 3rem; }
+        .m-programs a { color: var(--accent); font-weight: bold; text-decoration: none; }
+        .m-programs a:hover { text-decoration: underline; }
+
+        .m-cta {
+            background: #333; color: #fff;
+            border-radius: 10px; padding: 2rem;
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;
+        }
+        .m-cta h2 { color: #fff; margin: 0 0 0.3rem; font-size: 1.5rem; }
+        .m-cta p { margin: 0; color: #ddd; }
+        .m-cta a.btn {
+            background: #fff; color: #333; text-decoration: none; font-weight: bold;
+            padding: 0.7rem 1.4rem; border-radius: 6px; white-space: nowrap;
+        }
+        .m-cta a.btn:hover { background: #ddd; }
+
+        @media (max-width: 900px) {
+            .m-grid { grid-template-columns: repeat(2, 1fr); }
+            .m-stats { grid-template-columns: repeat(2, 1fr); }
+            .m-steps { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .m-grid { grid-template-columns: 1fr; }
+            main { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Arefeh Sherafati</h1>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="mentoring.html">Mentorship</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="tt.html">Table Tennis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="mentorship">
+            <h2>Mentorship</h2>
+            <div class="m-intro">
+                <p>Some of the most rewarding work I do is helping students carry out their first real research project. I mentor high school, undergraduate, and early graduate students one-on-one in computational neuroscience, AI, and data science. Over a project, each student goes from a broad interest to a focused question, analyzes real data or literature, and writes a complete research paper.</p>
+                <p>Below are snapshots of projects my students have completed or are working on now. They span brain imaging, machine learning for medicine, genetics, and cognitive science.</p>
+            </div>
+
+            <div class="m-stats">
+                <div class="m-stat"><span class="num">25+</span><span class="lbl">students mentored</span></div>
+                <div class="m-stat"><span class="num">15</span><span class="lbl">featured projects</span></div>
+                <div class="m-stat"><span class="num">11</span><span class="lbl">completed papers</span></div>
+                <div class="m-stat"><span class="num">2</span><span class="lbl">conference presentations</span></div>
+            </div>
+
+            <h2>How I mentor</h2>
+            <div class="m-steps">
+                <div class="m-step">
+                    <h3>1 · Find the question</h3>
+                    <p>We start from what the student is curious about and narrow it to one answerable research question.</p>
+                </div>
+                <div class="m-step">
+                    <h3>2 · Do the science</h3>
+                    <p>Students learn the methods hands-on: open datasets, Python, machine learning, statistics, or systematic literature review.</p>
+                </div>
+                <div class="m-step">
+                    <h3>3 · Write it up</h3>
+                    <p>Each project ends in a full paper, with guidance on figures, revisions, and submitting to journals or conferences.</p>
+                </div>
+            </div>
+
+            <h2>Student research</h2>
+            <div class="m-filters" role="group" aria-label="Filter projects">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="original">Original research</button>
+                <button data-filter="review">Reviews</button>
+                <button data-filter="progress">In progress</button>
+            </div>
+
+            <!--
+                To add a student photo: put the image in images/mentees/photos/ and replace the
+                initials inside <div class="m-avatar">…</div> with <img src="./images/mentees/photos/NAME.jpg" alt="NAME">
+            -->
+            <div class="m-grid" id="m-grid">
+
+                <article class="m-card" data-cat="original">
+                    <img src="./images/mentees/fokin.svg" alt="Schematic: video, audio and language features feed an encoding model that predicts brain responses; a connectivity-defined core is highlighted">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">VF</div><div><div class="m-name">Viacheslav Fokin</div><div class="m-meta">High school · 2025</div></div></div>
+                        <h3>Functional connectivity localizes a distributed supramodal core for naturalistic viewing</h3>
+                        <p>Built multimodal encoding models of fMRI responses to movies (Algonauts 2025 challenge), then used functional-connectivity strength to identify a compact core of regions, overlapping known multimodal hubs such as the superior temporal sulcus, that carries most of the predictive signal.</p>
+                        <span class="m-status done">Presented at CCN 2025 · manuscript in preparation</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="original">
+                    <img src="./images/mentees/pradhan.svg" alt="Schematic: a YAML configuration file drives QC, ReHo, FC, ICA and graph modules, producing a network connectivity matrix">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">SP</div><div><div class="m-name">Sara Pradhan</div><div class="m-meta">High school · 2025–26</div></div></div>
+                        <h3>A configuration-driven Python pipeline for reproducible functional brain network analysis</h3>
+                        <p>Built an open-source, modular fMRI pipeline controlled by a single configuration file, covering quality control, regional homogeneity, static and dynamic connectivity, ICA, and graph metrics. She validated it on public OpenNeuro data and tested how sensitive results are to preprocessing choices.</p>
+                        <span class="m-status done">Completed paper · open-source code</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="original">
+                    <img src="./images/mentees/sinha.svg" alt="Schematic: patient narratives labeled by a language model and symptom scales are combined into a wellness index tracked over time">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">IS</div><div><div class="m-name">Ishaan Sinha</div><div class="m-meta">High school · 2025</div></div></div>
+                        <h3>Quantifying patient narratives to strengthen longitudinal assessment in chronic pain</h3>
+                        <p>Combined language-model labeling of patient-written narratives (WHO functioning categories and sentiment) with numeric symptom scales into a 0–100 Wellness Index. He validated the labels against human annotators and tracked simulated patients over six months.</p>
+                        <span class="m-status done">Journal revision · <em>Young Scientist</em> (Vanderbilt)</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="original">
+                    <img src="./images/mentees/padala.svg" alt="Schematic: age, Glasgow Coma Scale and CT findings feed a machine-learning ensemble that outputs risk for five outcomes">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">TP</div><div><div class="m-name">Tanvi Padala</div><div class="m-meta">High school · 2025</div></div></div>
+                        <h3>NeuroPath: data-driven neurological outcomes following traumatic brain injury</h3>
+                        <p>Compared logistic regression, random forest, XGBoost, and LightGBM on the TRACK-TBI cohort. The models predict depression, PTSD, anxiety, post-concussion symptoms, and functional impairment three months after injury, using only information available at hospital admission.</p>
+                        <span class="m-status done">Presented at Texas Junior Academy of Science</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="original">
+                    <img src="./images/mentees/lee.svg" alt="Schematic: pre-operative and recurrence tumor masks, perturbed segmentations, and a feature-stability heatmap across MRI modalities">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">DL</div><div><div class="m-name">Daniel Lee</div><div class="m-meta">High school · 2025</div></div></div>
+                        <h3>Stability-informed feature selection for delta-radiomics in glioblastoma</h3>
+                        <p>Extracted longitudinal MRI radiomic features from public glioblastoma scans (TCIA). He tested which features stay stable when the tumor segmentation is eroded, dilated, or shifted, using intraclass and rank correlation across four MRI modalities.</p>
+                        <span class="m-status done">Completed paper</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="original">
+                    <img src="./images/mentees/kim.svg" alt="Schematic: Cas9 cuts an expanded CAG repeat, leading to either a disruptive NHEJ outcome or a stabilizing HDR outcome">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">IK</div><div><div class="m-name">Isabelle Kim</div><div class="m-meta">High school · 2025</div></div></div>
+                        <h3>CRISPR–Cas9 strategies to modify the HTT CAG repeat in Huntington's disease</h3>
+                        <p>In-silico simulations comparing disruptive (NHEJ) and stabilizing (HDR, CAG→CAA) edits on synthetic HTT alleles. HDR shortened the uninterrupted CAG tract without changing polyglutamine length, moving alleles toward lower-risk categories.</p>
+                        <span class="m-status done">Completed paper</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="original">
+                    <img src="./images/mentees/jamkhande.svg" alt="Schematic: emotion words, a face rating task, and a scatter plot relating vocabulary to perceived intensity">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">AJ</div><div><div class="m-name">Aditi Jamkhande</div><div class="m-meta">2026 · co-mentored</div></div></div>
+                        <h3>The relationship between emotional vocabulary and measures of external emotional perception</h3>
+                        <p>Designed and ran an online survey that paired an emotion-vocabulary inventory with face-rating tasks, to test whether a richer emotional vocabulary changes how people perceive the intensity and valence of others' emotions.</p>
+                        <span class="m-status done">Completed paper</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="review">
+                    <img src="./images/mentees/snow.svg" alt="Schematic: tiers of evidence for interventions that slow cognitive decline in Alzheimer's disease">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">KW</div><div><div class="m-name">Khaing Su Wai (Snow)</div><div class="m-meta">2025</div></div></div>
+                        <h3>Evidence-supported interventions for delaying cognitive decline in Alzheimer's disease</h3>
+                        <p>A review of randomized trials, meta-analyses, and guidelines comparing lifestyle and drug interventions. Multidomain lifestyle programs showed the strongest evidence, and the review weighs the promise and the access barriers of new anti-amyloid antibodies.</p>
+                        <span class="m-status done">Completed paper</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="review">
+                    <img src="./images/mentees/cano.svg" alt="Schematic: statistical and AI models compared across risk, diagnosis, progression and treatment stages of chronic illness">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">MC</div><div><div class="m-name">Marta Cano</div><div class="m-meta">2025</div></div></div>
+                        <h3>Statistical and AI methods in precision medicine across the timeline of chronic illness</h3>
+                        <p>A comparative survey of traditional statistical models and AI across risk prediction, early diagnosis, progression modeling, and treatment personalization. It argues for hybrid approaches that balance accuracy with interpretability.</p>
+                        <span class="m-status done">Completed paper</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="review">
+                    <img src="./images/mentees/soin.svg" alt="Schematic: spectrum of brain-computer interfaces from non-invasive EEG to invasive thread arrays">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">AS</div><div><div class="m-name">Avi Soin</div><div class="m-meta">High school · 2025–26</div></div></div>
+                        <h3>Neuralink in context: engineering integration or scientific breakthrough?</h3>
+                        <p>An analytical review placing Neuralink among non-invasive, semi-invasive, and invasive brain-computer interfaces, and weighing its public claims against the published evidence.</p>
+                        <span class="m-status done">Completed paper</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="review">
+                    <img src="./images/mentees/sattar.svg" alt="Schematic: dementia symptom onset shifted later for bilingual compared with monolingual adults">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">MS</div><div><div class="m-name">Syeda Mahum Sattar</div><div class="m-meta">2025–26</div></div></div>
+                        <h3>Bilingualism and cognitive reserve in aging</h3>
+                        <p>A structured review of behavioral and neuroanatomical studies on whether lifelong bilingualism builds cognitive reserve that delays dementia symptoms. It treats the evidence carefully, as association rather than proof of protection.</p>
+                        <span class="m-status done">Completed paper</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="progress">
+                    <img src="./images/mentees/jani.svg" alt="Schematic: forest plot comparing pooled diagnostic accuracy of blood and CSF biomarkers, with a PRISMA screening funnel">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">AJ</div><div><div class="m-name">Ayaan Jani</div><div class="m-meta">High school · 2026</div></div></div>
+                        <h3>Blood vs. cerebrospinal fluid liquid biopsy with machine learning for glioma detection</h3>
+                        <p>A PRISMA-guided systematic review and meta-analysis that pools reported diagnostic accuracy (AUC) to compare blood-based and CSF-based biomarker panels paired with machine-learning classifiers.</p>
+                        <span class="m-status wip">In progress</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="progress">
+                    <img src="./images/mentees/ha.svg" alt="Schematic: prefrontal-striatal-thalamic loop and a delayed cortical maturation curve in ADHD">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">EH</div><div><div class="m-name">Elena Ha</div><div class="m-meta">2026</div></div></div>
+                        <h3>Frontostriatal circuit development and executive function in childhood ADHD</h3>
+                        <p>A review drawing together structural MRI, diffusion imaging, and resting-state and task fMRI. It asks whether executive-function deficits in ADHD reflect delayed maturation of brain networks rather than a single damaged pathway.</p>
+                        <span class="m-status wip">Draft in progress</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="progress">
+                    <img src="./images/mentees/sankar.svg" alt="Schematic: default mode network suppression and control network engagement during a working-memory task, compared across hormone phases">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">PS</div><div><div class="m-name">Pramiti Sankar</div><div class="m-meta">College · 2025–26</div></div></div>
+                        <h3>Load-dependent frontoparietal and default-mode activity during working memory in hormonal contraceptive users</h3>
+                        <p>A secondary fMRI analysis of an open n-back dataset (fMRIPrep, Nilearn, Schaefer atlas). It tests whether the brain-network response to working-memory load differs between hormone-present and hormone-absent phases.</p>
+                        <span class="m-status wip">Analysis in progress</span>
+                    </div>
+                </article>
+
+                <article class="m-card" data-cat="progress">
+                    <img src="./images/mentees/yang.svg" alt="Schematic: heart signals from a smartphone camera and a chest strap compared through beat intervals and HRV metrics">
+                    <div class="m-body">
+                        <div class="m-who"><div class="m-avatar">MY</div><div><div class="m-name">Heeseong (Mickey) Yang</div><div class="m-meta">High school · 2026</div></div></div>
+                        <h3>Validating smartphone-camera heart rate variability against a chest-strap reference</h3>
+                        <p>Simultaneous recordings from a smartphone camera app he developed and a Polar H10 chest strap. The study tests how accurately short phone recordings measure HRV (RMSSD, SDNN) across adult age groups.</p>
+                        <span class="m-status wip">Data collection complete · analysis in progress</span>
+                    </div>
+                </article>
+
+            </div>
+            <p class="m-note">Figures are illustrative schematics of each project's design, not reported results.</p>
+
+            <h2 style="margin-top:3rem;">Programs</h2>
+            <p>I mentor students independently and through these research programs:</p>
+            <div class="m-programs">
+                <a href="https://www.lumiere-education.com/" target="_blank" rel="noopener">Lumiere Education</a>
+                <a href="https://mehtaplustutoring.com/" target="_blank" rel="noopener">MehtA+</a>
+                <a href="https://empowerly.com/" target="_blank" rel="noopener">Empowerly</a>
+                <a href="https://www.superprof.com/physics-phd-offering-research-mentorship-neuroscience-and-artificial-intelligencepublish-your-own-paper.html" target="_blank" rel="noopener">Superprof</a>
+            </div>
+
+            <div class="m-cta">
+                <div>
+                    <h2>Interested in doing research with me?</h2>
+                    <p>Tell me a little about your background and what you're curious about.</p>
+                </div>
+                <a class="btn" href="contact.html">Get in touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Arefeh Sherafati</p>
+    </footer>
+
+    <script>
+        (function () {
+            var buttons = document.querySelectorAll('.m-filters button');
+            var cards = document.querySelectorAll('#m-grid .m-card');
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    buttons.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    var f = btn.getAttribute('data-filter');
+                    cards.forEach(function (c) {
+                        c.style.display = (f === 'all' || c.getAttribute('data-cat') === f) ? '' : 'none';
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
