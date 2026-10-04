@@ -315,3 +315,14 @@ footer {
 }
 main { box-sizing: border-box; }
 @media (max-width: 600px) { main { padding: 2rem 1rem; } }
+
+/* Shared accent: deep indigo for "Learn More" links */
+.project-box a {
+    color: #3F3D7A;
+    font-weight: 600;
+    text-decoration: none;
+}
+.project-box a:hover {
+    color: #2B2A57;
+    text-decoration: underline;
+}
