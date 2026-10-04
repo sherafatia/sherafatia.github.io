@@ -318,11 +318,11 @@ main { box-sizing: border-box; }
 
 /* Shared accent: deep indigo for "Learn More" links */
 .project-box a {
-    color: #3F3D7A;
+    color: #4A47A0;
     font-weight: 600;
     text-decoration: none;
 }
 .project-box a:hover {
-    color: #2B2A57;
+    color: #37347E;
     text-decoration: underline;
 }
